@@ -1,0 +1,17 @@
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\bin\Debug\net6.0-windows\ClientRat.exe
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\bin\Debug\net6.0-windows\ClientRat.deps.json
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\bin\Debug\net6.0-windows\ClientRat.runtimeconfig.json
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\bin\Debug\net6.0-windows\ClientRat.dll
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\bin\Debug\net6.0-windows\ClientRat.pdb
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.csproj.AssemblyReference.cache
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.Form1.resources
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.csproj.GenerateResource.cache
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.AssemblyInfoInputs.cache
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.AssemblyInfo.cs
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.csproj.CoreCompileInputs.cache
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.dll
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\refint\ClientRat.dll
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.pdb
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ClientRat.genruntimeconfig.cache
+C:\Users\PhuocThanh\source\repos\ClientRat\ClientRat\obj\Debug\net6.0-windows\ref\ClientRat.dll

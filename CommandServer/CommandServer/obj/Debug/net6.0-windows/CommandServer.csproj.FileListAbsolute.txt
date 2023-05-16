@@ -1,0 +1,17 @@
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\bin\Debug\net6.0-windows\CommandServer.exe
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\bin\Debug\net6.0-windows\CommandServer.deps.json
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\bin\Debug\net6.0-windows\CommandServer.runtimeconfig.json
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\bin\Debug\net6.0-windows\CommandServer.dll
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\bin\Debug\net6.0-windows\CommandServer.pdb
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.csproj.AssemblyReference.cache
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.Form1.resources
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.csproj.GenerateResource.cache
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.AssemblyInfoInputs.cache
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.AssemblyInfo.cs
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.csproj.CoreCompileInputs.cache
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.dll
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\refint\CommandServer.dll
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.pdb
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\CommandServer.genruntimeconfig.cache
+C:\Users\PhuocThanh\source\repos\CommandServer\CommandServer\obj\Debug\net6.0-windows\ref\CommandServer.dll
