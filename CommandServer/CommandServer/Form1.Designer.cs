@@ -39,6 +39,8 @@
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             tabPage2 = new TabPage();
+            pictureBox1 = new PictureBox();
+            buttonCaptureDesktop = new Button();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             textBoxThucThi = new TextBox();
@@ -54,6 +56,8 @@
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             statusStrip1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabPage4.SuspendLayout();
             SuspendLayout();
             // 
@@ -161,6 +165,8 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(pictureBox1);
+            tabPage2.Controls.Add(buttonCaptureDesktop);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -168,6 +174,25 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Remote Desktop";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(8, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(781, 356);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // buttonCaptureDesktop
+            // 
+            buttonCaptureDesktop.Location = new Point(283, 368);
+            buttonCaptureDesktop.Name = "buttonCaptureDesktop";
+            buttonCaptureDesktop.Size = new Size(137, 46);
+            buttonCaptureDesktop.TabIndex = 0;
+            buttonCaptureDesktop.Text = "Capture Desktop";
+            buttonCaptureDesktop.UseVisualStyleBackColor = true;
+            buttonCaptureDesktop.Click += buttonCaptureDesktop_Click;
             // 
             // tabPage3
             // 
@@ -301,6 +326,8 @@
             tabPage1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabPage4.ResumeLayout(false);
             tabPage4.PerformLayout();
             ResumeLayout(false);
@@ -331,5 +358,7 @@
         private TextBox texBoxHostname;
         private Label label1;
         private TextBox textBoxHienThi;
+        private PictureBox pictureBox1;
+        private Button buttonCaptureDesktop;
     }
 }

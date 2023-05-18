@@ -6,6 +6,8 @@ using System.IO; //for Streams
 using System.Threading; //to run commands concurrently
 using System.Net; //for IPEndPoint
 using Renci.SshNet;
+using Renci.SshNet.Messages.Transport;
+using System.Drawing.Imaging;
 
 namespace CommandServer
 {
@@ -19,7 +21,9 @@ namespace CommandServer
         StreamReader streamReader;
         StringBuilder strInput;
         Thread th_StartListen, th_RunServer;
-
+        SshClient client;
+        ShellStream stream;
+        Bitmap memoryImage;
         //Commands in enumeration format:
         private enum command
         {
@@ -170,41 +174,7 @@ namespace CommandServer
 
         private void btConnection_Click(object sender, EventArgs e)
         {
-            
-        }
-        private void RunCommand()
-        {
-            var host = texBoxHostname.Text;
-            var username = textBoxUsername.Text;
-            var password = textBoxPassword.Text;
 
-            using (var client = new SshClient(host, username, password))
-            {
-                client.Connect();
-                // If the command2 depend on an environment modified by command1,
-                // execute them like this.
-                // If not, use separate CreateCommand calls.
-                var cmd = client.CreateCommand("command1; command2");
-
-                var result = cmd.BeginExecute();
-
-                using (var reader = new StreamReader(
-                                      cmd.OutputStream, Encoding.UTF8, true, 1024, true))
-                {
-                    while (!result.IsCompleted || !reader.EndOfStream)
-                    {
-                        string line = reader.ReadLine();
-                        if (line != null)
-                        {
-                            textBoxHienThi.Invoke(
-                                (MethodInvoker)(() =>
-                                    textBoxHienThi.AppendText(line + Environment.NewLine)));
-                        }
-                    }
-                }
-
-                cmd.EndExecute(result);
-            }
         }
 
         private void textBoxThucThi_KeyDown(object sender, KeyEventArgs e)
@@ -224,6 +194,42 @@ namespace CommandServer
                 }
             }
             catch (Exception err) { }
+        }
+
+        private void buttonCaptureDesktop_Click(object sender, EventArgs e)
+        {
+            CaptureDesktop();
+            Save();
+            pictureBox1.ImageLocation = "desktop.jpg";
+        }
+        public void CaptureDesktop()
+        {
+            try
+            {
+                Rectangle rc = Screen.PrimaryScreen.Bounds;
+                memoryImage = new Bitmap(rc.Width, rc.Height, PixelFormat.Format32bppArgb);
+                using (Graphics memoryGraphics = Graphics.FromImage(memoryImage))
+                {
+                    memoryGraphics.CopyFromScreen(rc.X, rc.Y, 0, 0, rc.Size, CopyPixelOperation.SourceCopy);
+                }
+            }
+            catch (Exception) { }
+        }
+
+        public void Save()
+        {
+            //String directory = Path.GetDirectoryName(filename);
+            //String name = Path.GetFileNameWithoutExtension(filename);
+            //if (!Directory.Exists(pathName))
+            //Directory.CreateDirectory(pathName);
+
+            String pathName = String.Format("{0}\\", Path.GetDirectoryName(Application.ExecutablePath));
+            string filename = String.Format("{0}Desktop.JPG", pathName);
+            try
+            {
+                memoryImage.Save(filename, ImageFormat.Jpeg);
+            }
+            catch (Exception) { }
         }
     }
 }
