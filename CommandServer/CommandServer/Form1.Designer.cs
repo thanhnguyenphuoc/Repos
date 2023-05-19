@@ -43,16 +43,15 @@
             buttonCaptureDesktop = new Button();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
-            textBoxThucThi = new TextBox();
-            btConnection = new Button();
-            textBoxPassword = new TextBox();
+            txtThucThi = new TextBox();
+            txtPassWord = new TextBox();
             label4 = new Label();
-            textBoxUsername = new TextBox();
+            txtUserName = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            texBoxHostname = new TextBox();
+            txtHostName = new TextBox();
             label1 = new Label();
-            textBoxHienThi = new TextBox();
+            txtHienThi = new TextBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -206,16 +205,15 @@
             // 
             // tabPage4
             // 
-            tabPage4.Controls.Add(textBoxThucThi);
-            tabPage4.Controls.Add(btConnection);
-            tabPage4.Controls.Add(textBoxPassword);
+            tabPage4.Controls.Add(txtThucThi);
+            tabPage4.Controls.Add(txtPassWord);
             tabPage4.Controls.Add(label4);
-            tabPage4.Controls.Add(textBoxUsername);
+            tabPage4.Controls.Add(txtUserName);
             tabPage4.Controls.Add(label3);
             tabPage4.Controls.Add(label2);
-            tabPage4.Controls.Add(texBoxHostname);
+            tabPage4.Controls.Add(txtHostName);
             tabPage4.Controls.Add(label1);
-            tabPage4.Controls.Add(textBoxHienThi);
+            tabPage4.Controls.Add(txtHienThi);
             tabPage4.Location = new Point(4, 24);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
@@ -224,31 +222,21 @@
             tabPage4.Text = "SSH conection";
             tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBoxThucThi
+            // txtThucThi
             // 
-            textBoxThucThi.Location = new Point(290, 317);
-            textBoxThucThi.Name = "textBoxThucThi";
-            textBoxThucThi.Size = new Size(494, 23);
-            textBoxThucThi.TabIndex = 9;
-            textBoxThucThi.KeyDown += textBoxThucThi_KeyDown;
+            txtThucThi.Location = new Point(290, 317);
+            txtThucThi.Name = "txtThucThi";
+            txtThucThi.Size = new Size(494, 23);
+            txtThucThi.TabIndex = 9;
+            txtThucThi.KeyDown += textBoxThucThi_KeyDown;
             // 
-            // btConnection
+            // txtPassWord
             // 
-            btConnection.Location = new Point(47, 349);
-            btConnection.Name = "btConnection";
-            btConnection.Size = new Size(180, 52);
-            btConnection.TabIndex = 8;
-            btConnection.Text = "Connection";
-            btConnection.UseVisualStyleBackColor = true;
-            btConnection.Click += btConnection_Click;
-            // 
-            // textBoxPassword
-            // 
-            textBoxPassword.Location = new Point(84, 164);
-            textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.PasswordChar = '*';
-            textBoxPassword.Size = new Size(143, 23);
-            textBoxPassword.TabIndex = 7;
+            txtPassWord.Location = new Point(84, 164);
+            txtPassWord.Name = "txtPassWord";
+            txtPassWord.PasswordChar = '*';
+            txtPassWord.Size = new Size(143, 23);
+            txtPassWord.TabIndex = 7;
             // 
             // label4
             // 
@@ -259,12 +247,12 @@
             label4.TabIndex = 6;
             label4.Text = "Password :";
             // 
-            // textBoxUsername
+            // txtUserName
             // 
-            textBoxUsername.Location = new Point(84, 121);
-            textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(143, 23);
-            textBoxUsername.TabIndex = 5;
+            txtUserName.Location = new Point(84, 121);
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(143, 23);
+            txtUserName.TabIndex = 5;
             // 
             // label3
             // 
@@ -284,12 +272,12 @@
             label2.TabIndex = 3;
             label2.Text = "Username :";
             // 
-            // texBoxHostname
+            // txtHostName
             // 
-            texBoxHostname.Location = new Point(84, 89);
-            texBoxHostname.Name = "texBoxHostname";
-            texBoxHostname.Size = new Size(143, 23);
-            texBoxHostname.TabIndex = 2;
+            txtHostName.Location = new Point(84, 89);
+            txtHostName.Name = "txtHostName";
+            txtHostName.Size = new Size(143, 23);
+            txtHostName.TabIndex = 2;
             // 
             // label1
             // 
@@ -301,15 +289,15 @@
             label1.TabIndex = 1;
             label1.Text = "SSH Connection";
             // 
-            // textBoxHienThi
+            // txtHienThi
             // 
-            textBoxHienThi.BackColor = Color.Black;
-            textBoxHienThi.ForeColor = Color.Green;
-            textBoxHienThi.Location = new Point(290, 6);
-            textBoxHienThi.Multiline = true;
-            textBoxHienThi.Name = "textBoxHienThi";
-            textBoxHienThi.Size = new Size(494, 287);
-            textBoxHienThi.TabIndex = 0;
+            txtHienThi.BackColor = Color.Black;
+            txtHienThi.ForeColor = Color.Green;
+            txtHienThi.Location = new Point(290, 6);
+            txtHienThi.Multiline = true;
+            txtHienThi.Name = "txtHienThi";
+            txtHienThi.Size = new Size(494, 287);
+            txtHienThi.TabIndex = 0;
             // 
             // Form1
             // 
@@ -348,16 +336,15 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TabPage tabPage4;
-        private TextBox textBoxThucThi;
-        private Button btConnection;
-        private TextBox textBoxPassword;
+        private TextBox txtThucThi;
+        private TextBox txtPassWord;
         private Label label4;
-        private TextBox textBoxUsername;
+        private TextBox txtUserName;
         private Label label3;
         private Label label2;
-        private TextBox texBoxHostname;
+        private TextBox txtHostName;
         private Label label1;
-        private TextBox textBoxHienThi;
+        private TextBox txtHienThi;
         private PictureBox pictureBox1;
         private Button buttonCaptureDesktop;
     }

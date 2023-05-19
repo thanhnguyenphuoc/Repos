@@ -21,9 +21,8 @@ namespace CommandServer
         StreamReader streamReader;
         StringBuilder strInput;
         Thread th_StartListen, th_RunServer;
-        SshClient client;
-        ShellStream stream;
         Bitmap memoryImage;
+        private bool isConnected = false;
         //Commands in enumeration format:
         private enum command
         {
@@ -44,7 +43,7 @@ namespace CommandServer
             th_StartListen = new Thread(new ThreadStart(StartListen));
             th_StartListen.Start();
             textBox2.Focus();
-            textBoxThucThi.Focus();
+            txtThucThi.Focus();
         }
 
         private void StartListen()
@@ -175,25 +174,67 @@ namespace CommandServer
         private void btConnection_Click(object sender, EventArgs e)
         {
 
+
         }
+        private void connectAndExecuteCommand()
+        {
+            string host = txtHostName.Text;
+            string username = txtUserName.Text;
+            string password = txtPassWord.Text;
+            try
+            {
+                // Kiểm tra xem TextBox có rỗng không
+                if (string.IsNullOrWhiteSpace(txtThucThi.Text))
+                {
+                    // Nếu TextBox rỗng, không thực hiện kết nối SSH
+                    return;
+                }
+                // Tạo đối tượng kết nối SSH
+                using (var client = new SshClient(host, username, password))
+                {
+                    client.Connect();
+
+
+                    if (client.IsConnected)
+                    {
+                        if (client.IsConnected && !isConnected)
+                        {
+                            isConnected = true;
+
+                            // Hiển thị thông báo kết nối thành công chỉ trong lần nhập đầu tiên
+                            MessageBox.Show("Connected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+
+                        string commandText = txtThucThi.Text;
+                        // Thực thi lệnh SSH
+                        var command = client.CreateCommand(commandText);
+                        var result = command.Execute();
+
+                        result = result.Replace("\n", Environment.NewLine);
+
+                        txtHienThi.Text = result;
+
+                        txtThucThi.Clear();
+                        client.Disconnect();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
 
         private void textBoxThucThi_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+            if (e.KeyCode == Keys.Enter)
             {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    strInput.Append(textBox2.Text.ToString());
-                    streamWriter.WriteLine(strInput);
-                    streamWriter.Flush();
-                    strInput.Remove(0, strInput.Length);
-                    if (textBox2.Text == "exit") Cleanup();
-                    if (textBox2.Text == "terminate") Cleanup();
-                    if (textBox2.Text == "cls") textBox1.Text = "";
-                    textBox2.Text = "";
-                }
+                connectAndExecuteCommand();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
-            catch (Exception err) { }
         }
 
         private void buttonCaptureDesktop_Click(object sender, EventArgs e)

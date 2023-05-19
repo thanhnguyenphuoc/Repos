@@ -5,6 +5,8 @@ Repos là một công cụ quản trị từ xa nhanh và nhẹ được viết 
 
 ![image](https://github.com/thanhnguyenphuoc/Repos/assets/16623330/b1a08717-6306-47b3-8f9d-e941f35f1e31)
 
+![image](https://github.com/thanhnguyenphuoc/Repos/assets/16623330/92725590-d272-4fa6-8b8c-bbd0831a0502)
+
 # Kế hoạch phát triển các chức năng trong tương lai 
 - Remote Destkop 
 - KeyLogger 
